@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+
+images.map(function (element) {
+  const li = document.querySelector("li");
+const img = document.querySelector("img")
+ 
+});
+
+console.log(li);
