@@ -15,7 +15,7 @@ function handleFormSubmit(event) {
   const password = formElements.password.value;
   if (mail === '' || password === '') {
     alert('Fill in all the points!');
-  }
+  } else{
 
   const formData = {
     mail,
@@ -24,6 +24,7 @@ function handleFormSubmit(event) {
 
   console.log(formData);
   formRef.reset();
+};
   console.log('Це сабміт форми');
 
   // const formData = new FormData(event.currentTarget);
@@ -33,3 +34,4 @@ function handleFormSubmit(event) {
   //     console.log('name', name);
   // });
 }
+

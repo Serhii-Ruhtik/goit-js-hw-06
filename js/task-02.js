@@ -7,37 +7,17 @@ const ingredients = [
   'Condiments',
 ];
 
-ingredients.map(function (element) {
-  const elements = document.createElement("li");
-  elements.textContent = element;
-  elements.classList.add("item");
-  console.log(elements);
+function createElementLi(ingredients) {
+  const arrLi = [];
 
-  const ulIngredientsRef = document.querySelector('#ingredients');
-ulIngredientsRef.append(elements);
-})
+  ingredients.forEach((ingredient) => {
+    const element = document.createElement('li');
+    element.textContent = ingredient;
+    element.classList.add('item');
+    arrLi.push(element);
+  });
+  return arrLi;
+};
+const ingredientsRef = document.querySelector("#ingredients");
+ingredientsRef.append(...createElementLi(ingredients));
 
-
-
-
-
-
-// const ingredientsRef = document.createElement('li');
-// ingredientsRef.classList.add('item');
-// ingredientsRef.textContent = 'pfujkjdjr'
-
-// console.log(ingredientsRef);
-
-// const ingredientsLinkRef = document.createElement('a');
-// ingredientsLinkRef.classList.add('list__ingredients');
-// ingredientsLinkRef.textContent = 'my room';
-// ingredientsLinkRef.href = '/profile';
-
-// console.log(ingredientsLinkRef);
-
-// ingredientsRef.appendChild(ingredientsLinkRef);
-// console.log(ingredientsRef)
-
-
-// const ulIngredientsRef = document.querySelector('#ingredients');
-// ulIngredientsRef.appendChild(ingredientsRef)
